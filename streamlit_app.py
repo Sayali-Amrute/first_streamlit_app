@@ -14,6 +14,7 @@ my_fruits_list = my_fruits_list.set_index('Fruit')
 fruits_selected = st.multiselect("Pick some fruits:", list(my_fruits_list.index), ['Avocado', 'Strawberries'])
 fruits_to_show = my_fruits_list.loc[fruits_selected]
 st.dataframe(fruits_to_show)
+st.header("Fruityvice Fruit Advice!")
 
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
