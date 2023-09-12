@@ -15,6 +15,8 @@ fruits_selected = st.multiselect("Pick some fruits:", list(my_fruits_list.index)
 fruits_to_show = my_fruits_list.loc[fruits_selected]
 st.dataframe(fruits_to_show)
 st.header("Fruityvice Fruit Advice!")
+fruit_choice = st.text_input('What fruit would you like information about?','Kiwi')
+st.write('The user entered ', fruit_choice)
 
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
